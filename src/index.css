@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 220 9% 6%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 9% 9%;
+    --card-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220 9% 6%;
+
+    --secondary: 220 9% 12%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 8% 14%;
+    --muted-foreground: 220 8% 62%;
+
+    --accent: 38 74% 55%;
+    --accent-foreground: 220 9% 6%;
+
+    --border: 220 8% 17%;
+    --input: 220 8% 17%;
+    --ring: 38 74% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .arch-portrait-frame {
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .border-glass {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .border-glass:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .floating-pill {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(18, 19, 22, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .floating-pill:hover {
+    transform: translateY(-2px);
+    border-color: rgba(224, 169, 64, 0.45);
+    background: rgba(28, 30, 35, 0.9);
+  }
+}
