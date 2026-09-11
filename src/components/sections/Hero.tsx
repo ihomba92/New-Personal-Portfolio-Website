@@ -87,7 +87,7 @@ export function Hero() {
               <img
                 alt={`${profile.name} - Software Engineer`}
                 className="h-full w-full object-cover object-top contrast-105 grayscale-[15%]"
-                src="public/WhatsApp Image 2026-03-21 at 12.05.01.jpeg"
+                src="/WhatsApp%20Image%202026-03-21%20at%2012.05.01.jpeg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
             </div>
